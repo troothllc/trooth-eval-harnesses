@@ -1,0 +1,159 @@
+framework:
+  id: eu-ai-act
+  name: EU Artificial Intelligence Act
+  version: "Regulation (EU) 2024/1689"
+  published: 2024-07-12
+  effective: 2026-08-02
+  source: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+  reviewed: 2026-06-08
+  notes: |
+    Regulation (EU) 2024/1689 of the European Parliament and of the Council
+    of 13 June 2024 laying down harmonised rules on artificial intelligence
+    (the "AI Act"). Article 50 transparency obligations and high-risk AI
+    system obligations enter application on 2 August 2026.
+
+    This harness summarizes obligations most relevant to Providers and
+    Deployers of AI systems offered to users in the EU.
+
+categories:
+  - id: SCOPE
+    name: Scope and Definitions (Articles 1 to 3)
+    description: Determine whether the AI Act applies to your system and what role you play.
+    items:
+      - id: SCOPE-1
+        title: Determine whether your system is an "AI system" under Article 3(1)
+        evidence_type: documentation
+        how_to_demonstrate: A documented analysis applying Article 3(1) definitions to each of your AI features.
+      - id: SCOPE-2
+        title: Determine whether you are a Provider, Deployer, Importer, or Distributor
+        evidence_type: documentation
+        how_to_demonstrate: A signed determination of role per AI system, since obligations differ by role.
+      - id: SCOPE-3
+        title: Determine whether the system falls under any Article 2 exclusions (military, national security, R&D)
+        evidence_type: documentation
+        how_to_demonstrate: A documented exclusion analysis where applicable.
+
+  - id: PROHIBITED
+    name: Prohibited AI Practices (Article 5)
+    description: Practices that are prohibited under the AI Act regardless of risk classification.
+    items:
+      - id: PROHIBITED-1
+        title: Subliminal techniques beyond a person's consciousness causing significant harm
+        evidence_type: documentation
+        how_to_demonstrate: A documented review confirming your system does not deploy subliminal manipulation as described in Article 5(1)(a).
+      - id: PROHIBITED-2
+        title: Exploitation of vulnerabilities of specific groups (age, disability, socioeconomic)
+        evidence_type: documentation
+        how_to_demonstrate: A documented review per Article 5(1)(b) confirming your system does not exploit identified vulnerability groups.
+      - id: PROHIBITED-3
+        title: Social scoring by public authorities
+        evidence_type: documentation
+        how_to_demonstrate: A documented review per Article 5(1)(c) confirming your system is not used for social scoring.
+      - id: PROHIBITED-4
+        title: Real-time remote biometric identification in public spaces for law enforcement
+        evidence_type: documentation
+        how_to_demonstrate: A documented review per Article 5(1)(h) confirming your system does not perform real-time remote biometric identification.
+      - id: PROHIBITED-5
+        title: Emotion recognition in the workplace and educational institutions
+        evidence_type: documentation
+        how_to_demonstrate: A documented review per Article 5(1)(f) confirming your system does not infer emotions in workplace or educational settings.
+
+  - id: HIGH_RISK
+    name: High-Risk AI Systems (Articles 6 to 22 and Annex III)
+    description: Systems classified as high-risk under Annex III must satisfy a long list of obligations before placing on the EU market.
+    items:
+      - id: HIGH-RISK-1
+        title: Classification under Annex III is documented
+        evidence_type: documentation
+        how_to_demonstrate: A risk classification analysis stating whether each AI feature falls under Annex III categories (biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration, justice, democratic processes).
+      - id: HIGH-RISK-2
+        title: Risk management system is established (Article 9)
+        evidence_type: documentation
+        how_to_demonstrate: A documented Risk Management System covering identification, estimation, mitigation, and testing of foreseeable risks throughout the lifecycle.
+      - id: HIGH-RISK-3
+        title: Data and data governance requirements are met (Article 10)
+        evidence_type: documentation
+        how_to_demonstrate: Documentation of training, validation, and test datasets including relevant design choices, data collection processes, and processing operations.
+      - id: HIGH-RISK-4
+        title: Technical documentation under Annex IV is maintained (Article 11)
+        evidence_type: documentation
+        how_to_demonstrate: A complete Annex IV technical file kept current for the lifetime of the system.
+      - id: HIGH-RISK-5
+        title: Record-keeping (logs) is enabled and retained (Article 12)
+        evidence_type: technical
+        how_to_demonstrate: Automated logging of system events with retention sufficient to support audit (at least the lifetime of the system in service).
+      - id: HIGH-RISK-6
+        title: Transparency information is provided to deployers (Article 13)
+        evidence_type: documentation
+        how_to_demonstrate: Instructions for use that include the system's intended purpose, accuracy levels, limitations, and human-oversight measures.
+      - id: HIGH-RISK-7
+        title: Human oversight is enabled (Article 14)
+        evidence_type: process
+        how_to_demonstrate: Documented human-oversight mechanisms (override, abort, review) and a description of who exercises oversight.
+      - id: HIGH-RISK-8
+        title: Accuracy, robustness, and cybersecurity are addressed (Article 15)
+        evidence_type: technical
+        how_to_demonstrate: Documented accuracy metrics, adversarial robustness testing, and cybersecurity measures appropriate to the risks.
+      - id: HIGH-RISK-9
+        title: CE marking is affixed and Declaration of Conformity is signed (Articles 47 to 48)
+        evidence_type: documentation
+        how_to_demonstrate: A signed Declaration of Conformity per Article 47 and CE mark affixed to the system. Note - only the Provider can sign this.
+      - id: HIGH-RISK-10
+        title: Registration in the EU database before placing on the market (Article 49)
+        evidence_type: documentation
+        how_to_demonstrate: Registration record in the EUDB (or, until the database is operational, a pre-filled registration payload ready for submission).
+
+  - id: ARTICLE_50
+    name: Transparency Obligations (Article 50)
+    description: Limited-risk AI systems still owe disclosure obligations to users.
+    items:
+      - id: ARTICLE-50-1
+        title: Users are informed they are interacting with an AI system (Article 50(1))
+        evidence_type: documentation
+        how_to_demonstrate: A clear, accessible disclosure in your UI or API response that the user is interacting with AI, unless obvious from context.
+      - id: ARTICLE-50-2
+        title: Synthetic audio, image, video, or text content is marked as artificially generated (Article 50(2))
+        evidence_type: technical
+        how_to_demonstrate: Provenance metadata (C2PA, IPTC) or visible watermarks on synthetic media outputs.
+      - id: ARTICLE-50-3
+        title: Emotion-recognition or biometric-categorization disclosure (Article 50(3))
+        evidence_type: documentation
+        how_to_demonstrate: Disclosure to individuals subject to emotion recognition or biometric categorization, where lawful.
+      - id: ARTICLE-50-4
+        title: Deep-fakes are clearly disclosed as artificially generated or manipulated (Article 50(4))
+        evidence_type: documentation
+        how_to_demonstrate: Visible disclosure label on deep-fake content produced by your system.
+
+  - id: GPAI
+    name: General-Purpose AI Models (Articles 51 to 55)
+    description: Obligations for providers of general-purpose AI models (GPT-class and similar).
+    items:
+      - id: GPAI-1
+        title: Technical documentation of the model is maintained (Article 53(1)(a))
+        evidence_type: documentation
+        how_to_demonstrate: Annex XI technical documentation kept current.
+      - id: GPAI-2
+        title: Downstream providers are given the information needed to comply (Article 53(1)(b))
+        evidence_type: documentation
+        how_to_demonstrate: A model card or equivalent that gives downstream integrators the information required by Annex XII.
+      - id: GPAI-3
+        title: A copyright policy is in place (Article 53(1)(c))
+        evidence_type: documentation
+        how_to_demonstrate: A documented policy stating how the model respects EU copyright law (e.g., honoring the text-and-data-mining opt-out under Directive 2019/790).
+      - id: GPAI-4
+        title: A summary of training content is made publicly available (Article 53(1)(d))
+        evidence_type: documentation
+        how_to_demonstrate: A published summary describing the data sources used to train the model, sufficiently detailed to allow rightsholders to identify their content.
+
+  - id: POST_MARKET
+    name: Post-Market Monitoring and Serious Incident Reporting (Articles 72 to 73)
+    description: Ongoing obligations after a high-risk system is placed on the market.
+    items:
+      - id: POST-1
+        title: A post-market monitoring system is established (Article 72)
+        evidence_type: documentation
+        how_to_demonstrate: A Post-Market Monitoring Plan describing how performance, drift, and incidents are detected after deployment.
+      - id: POST-2
+        title: Serious incidents are reported to the relevant authority within 15 days (Article 73)
+        evidence_type: process
+        how_to_demonstrate: An Incident Response Plan that specifies the 15-day reporting timeline and the responsible reporter.

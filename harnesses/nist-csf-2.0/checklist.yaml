@@ -1,0 +1,136 @@
+framework:
+  id: nist-csf-2.0
+  name: NIST Cybersecurity Framework
+  version: "2.0"
+  published: 2024-02-26
+  source: https://www.nist.gov/cyberframework
+  reviewed: 2026-06-08
+  notes: |
+    NIST CSF 2.0 organizes cybersecurity outcomes into six Functions:
+    Govern (GV), Identify (ID), Protect (PR), Detect (DE), Respond (RS),
+    and Recover (RC). Each Function contains Categories and Subcategories.
+    This harness summarizes the Subcategories most frequently referenced
+    in SaaS vendor reviews and SOC 2 audits.
+
+categories:
+  - id: GV
+    name: Govern
+    description: Establish, communicate, and monitor the cybersecurity risk-management strategy.
+    items:
+      - id: GV.OC-01
+        title: Organizational mission is understood and informs cybersecurity risk management
+        evidence_type: documentation
+        how_to_demonstrate: A current Information Security Policy that references the company's mission and risk appetite.
+      - id: GV.RM-01
+        title: Risk management objectives are established and agreed to by organizational stakeholders
+        evidence_type: documentation
+        how_to_demonstrate: A signed Risk Assessment with documented objectives, prioritization rationale, and stakeholder approval.
+      - id: GV.RR-02
+        title: Roles, responsibilities, and authorities related to cybersecurity risk are established
+        evidence_type: documentation
+        how_to_demonstrate: A RACI chart or role-definition document showing who owns risk decisions, who executes controls, and who reviews.
+      - id: GV.PO-01
+        title: Policy for managing cybersecurity risks is established and communicated
+        evidence_type: documentation
+        how_to_demonstrate: A published Information Security Policy reviewed at least annually with date-stamped revisions.
+      - id: GV.SC-01
+        title: Supply-chain risk-management program is established
+        evidence_type: documentation
+        how_to_demonstrate: A Vendor Risk Register with tier classification, due-diligence records, and review cadence.
+
+  - id: ID
+    name: Identify
+    description: Develop the organizational understanding to manage cybersecurity risk to systems, assets, data, and capabilities.
+    items:
+      - id: ID.AM-01
+        title: Inventories of hardware managed by the organization are maintained
+        evidence_type: technical
+        how_to_demonstrate: An asset inventory (Mac MDM, AWS account inventory, Cloudflare account inventory) with last-updated timestamps.
+      - id: ID.AM-02
+        title: Inventories of software, services, and systems managed by the organization are maintained
+        evidence_type: technical
+        how_to_demonstrate: A Software Bill of Materials (CycloneDX or SPDX) regenerated on every release.
+      - id: ID.RA-01
+        title: Vulnerabilities in assets are identified, validated, and recorded
+        evidence_type: technical
+        how_to_demonstrate: Dependabot, Snyk, or equivalent dependency-scan output with vulnerability tickets logged in your tracker.
+      - id: ID.IM-01
+        title: Improvements are identified from internal and external sources
+        evidence_type: process
+        how_to_demonstrate: A documented post-incident review process with at least one example review on file.
+
+  - id: PR
+    name: Protect
+    description: Develop and implement appropriate safeguards.
+    items:
+      - id: PR.AA-01
+        title: Identities and credentials for authorized users, services, and hardware are managed by the organization
+        evidence_type: technical
+        how_to_demonstrate: SSO with MFA enforced for every workforce account; no shared credentials.
+      - id: PR.AA-05
+        title: Access permissions, entitlements, and authorizations are defined in a policy and managed, enforced, and reviewed
+        evidence_type: technical
+        how_to_demonstrate: Quarterly access-review records showing who has access to what, with removals logged.
+      - id: PR.DS-01
+        title: Confidentiality, integrity, and availability of data-at-rest are protected
+        evidence_type: technical
+        how_to_demonstrate: Encryption at rest enabled in the cloud provider console (RDS, S3, EBS, etc.).
+      - id: PR.DS-02
+        title: Confidentiality, integrity, and availability of data-in-transit are protected
+        evidence_type: technical
+        how_to_demonstrate: TLS 1.2 or higher enforced; SSL Labs A or higher grade; HSTS enabled.
+      - id: PR.PS-01
+        title: Configuration-management practices are established and applied
+        evidence_type: technical
+        how_to_demonstrate: Infrastructure-as-code (Terraform, CloudFormation) with branch protection; no manual production changes.
+      - id: PR.PS-06
+        title: Secure software-development practices are integrated, and their performance is monitored
+        evidence_type: process
+        how_to_demonstrate: Required code review on every PR, branch protection on main, automated security scans in CI.
+
+  - id: DE
+    name: Detect
+    description: Develop and implement appropriate activities to identify the occurrence of a cybersecurity event.
+    items:
+      - id: DE.CM-01
+        title: Networks and network services are monitored to find potentially adverse events
+        evidence_type: technical
+        how_to_demonstrate: Cloudflare WAF, AWS GuardDuty, or equivalent edge and network monitoring with alerts routed to a queue.
+      - id: DE.CM-09
+        title: Computing hardware and software, runtime environments, and their data are monitored to find potentially adverse events
+        evidence_type: technical
+        how_to_demonstrate: Application performance monitoring (Sentry, Datadog) with alert routing.
+      - id: DE.AE-02
+        title: Potentially adverse events are analyzed to better understand associated activities
+        evidence_type: process
+        how_to_demonstrate: An on-call rotation or alert response playbook with documented handoff between detection and response.
+
+  - id: RS
+    name: Respond
+    description: Develop and implement appropriate activities to take action regarding a detected cybersecurity incident.
+    items:
+      - id: RS.MA-01
+        title: The incident-response plan is executed in coordination with relevant third parties once an incident is declared
+        evidence_type: documentation
+        how_to_demonstrate: A published Incident Response Plan with at least one tabletop or live exercise documented in the past 12 months.
+      - id: RS.CO-02
+        title: Internal and external stakeholders are notified of incidents
+        evidence_type: process
+        how_to_demonstrate: A notification template and contact list including regulators, customers, and counsel.
+      - id: RS.AN-03
+        title: Analysis is performed to establish what has taken place during an incident and the root cause
+        evidence_type: process
+        how_to_demonstrate: A post-incident review template requiring root-cause analysis and corrective actions.
+
+  - id: RC
+    name: Recover
+    description: Develop and implement appropriate activities to maintain plans for resilience and to restore capabilities or services impaired by a cybersecurity incident.
+    items:
+      - id: RC.RP-01
+        title: The recovery portion of the incident-response plan is executed once initiated from the incident-response process
+        evidence_type: documentation
+        how_to_demonstrate: A Business Continuity / Disaster Recovery Plan with documented RTO and RPO targets per critical system.
+      - id: RC.CO-03
+        title: Recovery activities and progress in restoring operations are communicated to designated internal and external stakeholders
+        evidence_type: process
+        how_to_demonstrate: A status-page integration (e.g., status.example.com via your status page vendor) or equivalent customer-facing incident communication channel.

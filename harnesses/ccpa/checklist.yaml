@@ -1,0 +1,125 @@
+framework:
+  id: ccpa
+  name: California Consumer Privacy Act (as amended by CPRA)
+  version: "Civil Code 1798.100 et seq."
+  effective: 2020-01-01
+  cpra_effective: 2023-01-01
+  source: https://oag.ca.gov/privacy/ccpa
+  reviewed: 2026-06-08
+  notes: |
+    The California Consumer Privacy Act of 2018, as amended by the California
+    Privacy Rights Act of 2020 (CPRA). Applies to "Businesses" meeting any
+    of the thresholds in 1798.140(d): annual gross revenue over USD 25M,
+    or processing personal information of 100,000+ California consumers,
+    or deriving 50%+ of revenue from selling or sharing personal information.
+
+categories:
+  - id: APPLICABILITY
+    name: Applicability and Roles (1798.140)
+    description: Determine whether CCPA applies and what role you play.
+    items:
+      - id: APP-1
+        title: Determine whether your entity is a "Business" under 1798.140(d)
+        evidence_type: documentation
+        how_to_demonstrate: An applicability analysis based on revenue, California consumer volume, or revenue share from selling/sharing personal information.
+      - id: APP-2
+        title: Determine whether you are a Business, Service Provider, Contractor, or Third Party for each processing context
+        evidence_type: documentation
+        how_to_demonstrate: A documented role determination per processing context (the role under CCPA differs from the role under GDPR).
+
+  - id: NOTICE
+    name: Notice at Collection (1798.100(b), 1798.130(a)(5))
+    description: Information that must be provided at or before the point of collection.
+    items:
+      - id: NOTICE-1
+        title: Notice at collection lists the categories of personal information collected
+        evidence_type: documentation
+        how_to_demonstrate: A privacy notice (or banner) at or before collection that lists each category of personal information collected, citing the statutory category enumeration in 1798.140(v).
+      - id: NOTICE-2
+        title: Notice at collection states the purposes for which each category is used
+        evidence_type: documentation
+        how_to_demonstrate: A privacy notice that pairs each category with its business or commercial purpose.
+      - id: NOTICE-3
+        title: Notice states whether personal information is sold or shared
+        evidence_type: documentation
+        how_to_demonstrate: An explicit statement in the notice about whether personal information is sold or shared, and a link to the right-to-opt-out mechanism if so.
+      - id: NOTICE-4
+        title: Notice states the length of time the business intends to retain each category
+        evidence_type: documentation
+        how_to_demonstrate: A retention schedule by category disclosed in the privacy notice (or a generalized statement of the criteria used to determine retention).
+      - id: NOTICE-5
+        title: Notice identifies sensitive personal information and the right to limit its use (1798.121)
+        evidence_type: documentation
+        how_to_demonstrate: A privacy notice section identifying sensitive personal information categories and providing a "Limit the Use of My Sensitive Personal Information" mechanism if used outside the permitted Business purposes.
+
+  - id: CONSUMER_RIGHTS
+    name: Consumer Rights (1798.100, 1798.105, 1798.106, 1798.110, 1798.115, 1798.120, 1798.121)
+    description: Rights consumers can exercise against the Business.
+    items:
+      - id: RIGHTS-1
+        title: Right to Know (1798.110, 1798.115)
+        evidence_type: process
+        how_to_demonstrate: A documented Verifiable Consumer Request workflow that produces, within 45 days, the categories and specific pieces of personal information collected, sources, purposes, and recipients.
+      - id: RIGHTS-2
+        title: Right to Delete (1798.105)
+        evidence_type: process
+        how_to_demonstrate: A deletion workflow that erases personal information subject to the statutory exceptions in 1798.105(d).
+      - id: RIGHTS-3
+        title: Right to Correct (1798.106)
+        evidence_type: process
+        how_to_demonstrate: A user-facing correction workflow with verified-consumer-request verification.
+      - id: RIGHTS-4
+        title: Right to Opt Out of Sale or Sharing (1798.120)
+        evidence_type: technical
+        how_to_demonstrate: A "Do Not Sell or Share My Personal Information" link on every page that collects personal information of California residents, with backend opt-out enforcement.
+      - id: RIGHTS-5
+        title: Right to Limit Use of Sensitive Personal Information (1798.121)
+        evidence_type: technical
+        how_to_demonstrate: A user-facing "Limit the Use of My Sensitive Personal Information" link that restricts processing of sensitive PI to Business-purpose uses.
+      - id: RIGHTS-6
+        title: Right to Non-Discrimination (1798.125)
+        evidence_type: documentation
+        how_to_demonstrate: A documented policy confirming that exercising CCPA rights does not result in denial of service, different pricing, or different quality, except where financial-incentive programs are properly disclosed.
+      - id: RIGHTS-7
+        title: Global Privacy Control signal is honored (Cal. Code Regs. tit. 11, sec. 7025)
+        evidence_type: technical
+        how_to_demonstrate: Browser-based GPC signals are recognized and treated as a valid opt-out request, logged for compliance.
+
+  - id: SERVICE_PROVIDERS
+    name: Service Providers, Contractors, and Third Parties (1798.140, 1798.105(c))
+    description: Contractual safeguards required when sharing data downstream.
+    items:
+      - id: SP-1
+        title: Written contracts with Service Providers and Contractors include CCPA-required terms
+        evidence_type: documentation
+        how_to_demonstrate: Data Processing Addenda with Service Providers that prohibit retention, use, or disclosure of personal information for any purpose other than the specified Business purpose, and require deletion on termination.
+      - id: SP-2
+        title: Sales and sharing arrangements with Third Parties are subject to a contract that obligates the Third Party to provide the same level of privacy protection
+        evidence_type: documentation
+        how_to_demonstrate: Contracts with any Third Party that buys or receives data for cross-context behavioral advertising obligate them to honor consumer opt-outs and CCPA obligations.
+
+  - id: SECURITY
+    name: Reasonable Security and Breach Liability (1798.150)
+    description: Statutory liability for breaches resulting from failure to maintain reasonable security.
+    items:
+      - id: SEC-1
+        title: Reasonable security measures appropriate to the nature of the personal information are implemented (1798.100(e))
+        evidence_type: technical
+        how_to_demonstrate: A documented security program with encryption, access control, logging, vulnerability management, and personnel measures.
+      - id: SEC-2
+        title: Procedures for responding to a personal information breach with statutory private right of action (1798.150) are documented
+        evidence_type: process
+        how_to_demonstrate: An Incident Response Plan referencing California Civil Code 1798.150 statutory damages and the 30-day cure period where applicable.
+
+  - id: GOVERNANCE
+    name: Governance and Risk Assessments (CPRA / Cal. Code Regs. tit. 11)
+    description: Annual cybersecurity audits and risk assessments under CPRA.
+    items:
+      - id: GOV-1
+        title: Annual cybersecurity audit is performed where required (1798.185(a)(15)(A))
+        evidence_type: documentation
+        how_to_demonstrate: An annual independent cybersecurity audit (where the California Privacy Protection Agency regulations require one based on the size and nature of processing).
+      - id: GOV-2
+        title: Risk assessments are performed for processing that presents significant risk (1798.185(a)(15)(B))
+        evidence_type: documentation
+        how_to_demonstrate: Documented risk assessments for processing of sensitive personal information, automated decisions producing legal or similarly significant effects, and processing for cross-context behavioral advertising, submitted to the CPPA on the schedule prescribed by regulation.

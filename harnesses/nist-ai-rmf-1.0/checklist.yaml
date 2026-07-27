@@ -1,0 +1,142 @@
+framework:
+  id: nist-ai-rmf-1.0
+  name: NIST AI Risk Management Framework
+  version: "1.0"
+  published: 2023-01-26
+  source: https://www.nist.gov/itl/ai-risk-management-framework
+  reviewed: 2026-06-08
+  notes: |
+    NIST AI RMF 1.0 organizes AI risk management into four Functions:
+    Govern, Map, Measure, Manage. The Generative AI Profile (NIST AI 600-1)
+    extends the framework with twelve generative-AI-specific risks.
+    This harness covers the most-evaluated subcategories.
+
+categories:
+  - id: GOVERN
+    name: Govern
+    description: Cultivate a culture of risk management.
+    items:
+      - id: GOVERN-1.1
+        title: Legal and regulatory requirements involving AI are understood, managed, and documented
+        evidence_type: documentation
+        how_to_demonstrate: A current AI Use Policy that references the EU AI Act, applicable U.S. state laws, and any sector regulation that touches your AI features.
+      - id: GOVERN-1.2
+        title: Characteristics of trustworthy AI are integrated into organizational policies, processes, and procedures
+        evidence_type: documentation
+        how_to_demonstrate: A policy that explicitly references the seven NIST trustworthiness characteristics (valid, safe, secure, accountable, explainable, privacy-enhanced, fair).
+      - id: GOVERN-2.1
+        title: Roles and responsibilities for AI risk management are established
+        evidence_type: documentation
+        how_to_demonstrate: A named individual (or role) accountable for AI risk, documented in an organizational chart or RACI.
+      - id: GOVERN-3.2
+        title: Diversity, equity, inclusion, and accessibility considerations are integrated into AI lifecycle decisions
+        evidence_type: documentation
+        how_to_demonstrate: A Model Card section addressing bias evaluation across demographic and contextual factors.
+      - id: GOVERN-4.1
+        title: Policies foster a critical-thinking and safety-first mindset
+        evidence_type: process
+        how_to_demonstrate: Required design-review checklist that asks "what is the worst-case failure mode" before AI features ship.
+      - id: GOVERN-5.1
+        title: Mechanisms are in place to inventory AI systems
+        evidence_type: documentation
+        how_to_demonstrate: An AI System Register listing every AI model, classifier, or generative feature in production with its purpose, owner, and risk tier.
+      - id: GOVERN-6.1
+        title: Mechanisms for third-party AI risks are addressed
+        evidence_type: documentation
+        how_to_demonstrate: A Vendor Risk Register with rows for every third-party AI service used in your stack and a review of their published trust posture.
+
+  - id: MAP
+    name: Map
+    description: Establish the context to frame the risks related to an AI system.
+    items:
+      - id: MAP-1.1
+        title: Intended purposes, potentially beneficial uses, context-specific laws, norms and expectations, and prospective settings are understood
+        evidence_type: documentation
+        how_to_demonstrate: Each AI feature has a one-page "Intended Use" document that states purpose, users, prohibited uses, and applicable law.
+      - id: MAP-2.3
+        title: Targets, deployment settings, and downstream actors and stakeholders are identified
+        evidence_type: documentation
+        how_to_demonstrate: A stakeholder map for each AI system identifying who is affected by its outputs (users, third parties, regulators).
+      - id: MAP-3.1
+        title: Potential benefits of the AI system are examined
+        evidence_type: documentation
+        how_to_demonstrate: A business case for each AI feature that articulates the user value it delivers.
+      - id: MAP-4.1
+        title: Approaches and metrics for measurement of AI risks are identified
+        evidence_type: technical
+        how_to_demonstrate: A documented evaluation suite (accuracy, fairness, robustness) with target thresholds.
+
+  - id: MEASURE
+    name: Measure
+    description: Use quantitative, qualitative, or mixed-method tools to assess AI risks.
+    items:
+      - id: MEASURE-1.1
+        title: Approaches and metrics for measurement of identified risks are selected
+        evidence_type: technical
+        how_to_demonstrate: An evaluation harness that runs on every model release with results stored in an artifact registry.
+      - id: MEASURE-2.7
+        title: AI system security and resilience are evaluated and documented
+        evidence_type: technical
+        how_to_demonstrate: Adversarial-prompt test suite, jailbreak resistance evaluation, and a documented red-team review.
+      - id: MEASURE-2.11
+        title: Fairness and bias are evaluated and results documented
+        evidence_type: technical
+        how_to_demonstrate: Demographic parity, equalized odds, or similar fairness metrics evaluated and recorded for each major model release.
+      - id: MEASURE-3.1
+        title: Approaches, personnel, and documentation for measuring risk over time are continuously improved
+        evidence_type: process
+        how_to_demonstrate: A scheduled review cadence (quarterly or per-release) where evaluation thresholds are reassessed.
+
+  - id: MANAGE
+    name: Manage
+    description: Prioritize and act on identified risks.
+    items:
+      - id: MANAGE-1.1
+        title: A determination is made as to whether the AI system achieves its intended purposes and stated objectives
+        evidence_type: documentation
+        how_to_demonstrate: A go/no-go review at major release milestones with documented sign-off.
+      - id: MANAGE-2.1
+        title: Resources required to manage AI risks are taken into account
+        evidence_type: documentation
+        how_to_demonstrate: A budget line item or staff allocation specifically for AI risk activities.
+      - id: MANAGE-4.1
+        title: Risks are continually monitored
+        evidence_type: technical
+        how_to_demonstrate: Production telemetry for drift, hallucination rate, fairness metrics, with alerts when thresholds are breached.
+
+  - id: GENAI_PROFILE
+    name: Generative AI Profile (NIST AI 600-1)
+    description: Twelve risk categories specific to generative AI, published in July 2024 as a profile of NIST AI RMF 1.0.
+    items:
+      - id: GENAI-1
+        title: CBRN (Chemical, Biological, Radiological, Nuclear) information or capabilities risk is managed
+        evidence_type: process
+        how_to_demonstrate: Refusal patterns and content filters that block CBRN uplift requests; documented red-team evaluation.
+      - id: GENAI-2
+        title: Confabulation (hallucination) risk is managed
+        evidence_type: technical
+        how_to_demonstrate: Citation verification, retrieval grounding, or hallucination evaluation suite with rates tracked over time.
+      - id: GENAI-3
+        title: Dangerous, violent, or hateful content risk is managed
+        evidence_type: technical
+        how_to_demonstrate: Safety classifier on outputs; evaluation results from a standard harmful-content benchmark.
+      - id: GENAI-4
+        title: Data privacy risk is managed
+        evidence_type: process
+        how_to_demonstrate: Documented policy on training-data lineage, PII handling, and customer-data opt-out.
+      - id: GENAI-7
+        title: Information integrity (misinformation, disinformation) risk is managed
+        evidence_type: documentation
+        how_to_demonstrate: Provenance metadata on generated content (C2PA, watermarking) where supported.
+      - id: GENAI-9
+        title: Intellectual property risk is managed
+        evidence_type: process
+        how_to_demonstrate: Training-data license documentation; opt-out for rightsholders; output filters for known copyrighted material.
+      - id: GENAI-11
+        title: Toxicity, bias, and homogenization risk is managed
+        evidence_type: technical
+        how_to_demonstrate: Bias evaluation across demographic axes with results documented in the Model Card.
+      - id: GENAI-12
+        title: Value chain and component integration risk is managed
+        evidence_type: documentation
+        how_to_demonstrate: A documented model-supply-chain inventory (base model, fine-tunes, embeddings, retrieval indexes) with provenance for each component.
