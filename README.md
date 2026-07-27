@@ -3,7 +3,7 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Frameworks](https://img.shields.io/badge/frameworks-5-D97706)](#)
 
-Open-source compliance evaluation harnesses for AI vendors. Five structured checklists — one per framework — that you can use to self-evaluate against the controls before you go through a formal audit. Free under Apache 2.0.
+Open-source compliance evaluation harnesses for AI vendors. Five structured checklists, one per framework, that you can use to self-evaluate against the controls before you go through a formal audit. Free under Apache 2.0.
 
 ## Why these exist
 
