@@ -1,20 +1,41 @@
 framework:
   id: eu-ai-act
   name: EU Artificial Intelligence Act
-  version: "Regulation (EU) 2024/1689"
+  version: "Regulation (EU) 2024/1689, as amended by Regulation (EU) 2026/1744"
   published: 2024-07-12
   effective: 2026-08-02
   source: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
-  reviewed: 2026-06-08
+  reviewed: 2026-09-25
   notes: |
     Regulation (EU) 2024/1689 of the European Parliament and of the Council
     of 13 June 2024 laying down harmonised rules on artificial intelligence
-    (the "AI Act"). As adopted in 2024, Article 113 made Article 50
-    transparency obligations and the obligations for high-risk AI systems
-    listed in Annex III apply from 2 August 2026, and those for high-risk
-    systems under Article 6(1) and Annex I from 2 August 2027. Later
-    amendments may change these dates; check the Official Journal before
-    relying on them.
+    (the "AI Act"), as amended by the AI Omnibus, Regulation (EU) 2026/1744
+    (OJ L 2026/1744, published 24 July 2026, in force 27 July 2026). The
+    "effective" date above is the Act's general date of application.
+
+    Application dates as amended:
+    - 2 February 2025: scope and definitions, the prohibited practices
+      (Article 5) and AI literacy (Article 4). Unchanged.
+    - 2 August 2025: the general-purpose AI model obligations, governance and
+      penalties. Unchanged.
+    - 2 August 2026: the transparency obligations in Article 50, except
+      Article 50(2).
+    - 2 December 2026: the marking of synthetic content under Article 50(2),
+      and a new prohibition on AI systems that generate child sexual abuse
+      material or non-consensual intimate content.
+    - 2 August 2027: general-purpose AI models placed on the market before
+      2 August 2025 must comply.
+    - 2 December 2027: the Chapter III Sections 1 to 3 requirements for
+      high-risk AI systems listed in Annex III (Article 6(2)). As adopted in
+      2024 this date was 2 August 2026.
+    - 2 August 2028: the same requirements for high-risk AI systems under
+      Article 6(1) and Annex I (products and safety components). As adopted
+      in 2024 this date was 2 August 2027.
+
+    Sources: https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force
+    and https://fpf.org/blog/the-ai-act-implementation-timeline-what-changes-under-the-ai-omnibus/
+    Later amendments may change these dates; check the Official Journal
+    before relying on them.
 
     This checklist summarizes obligations most relevant to Providers and
     Deployers of AI systems offered to users in the EU.
