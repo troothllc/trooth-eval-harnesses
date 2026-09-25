@@ -36,7 +36,7 @@ categories:
       - id: GV.SC-01
         title: Supply-chain risk-management program is established
         evidence_type: documentation
-        how_to_demonstrate: A Vendor Risk Register with tier classification, due-diligence records, and review cadence.
+        how_to_demonstrate: A Vendor Risk Register with risk classification, due-diligence records, and review cadence.
 
   - id: ID
     name: Identify
@@ -53,7 +53,7 @@ categories:
       - id: ID.RA-01
         title: Vulnerabilities in assets are identified, validated, and recorded
         evidence_type: technical
-        how_to_demonstrate: Dependabot, Snyk, or equivalent dependency-scan output with vulnerability tickets logged in your tracker.
+        how_to_demonstrate: Dependabot, Snyk, or equivalent dependency-vulnerability reports with vulnerability tickets logged in your tracker.
       - id: ID.IM-01
         title: Improvements are identified from internal and external sources
         evidence_type: process
@@ -86,7 +86,7 @@ categories:
       - id: PR.PS-06
         title: Secure software-development practices are integrated, and their performance is monitored
         evidence_type: process
-        how_to_demonstrate: Required code review on every PR, branch protection on main, automated security scans in CI.
+        how_to_demonstrate: Required code review on every PR, branch protection on main, automated security testing in CI.
 
   - id: DE
     name: Detect
@@ -103,7 +103,7 @@ categories:
       - id: DE.AE-02
         title: Potentially adverse events are analyzed to better understand associated activities
         evidence_type: process
-        how_to_demonstrate: An on-call rotation or alert response playbook with documented handoff between detection and response.
+        how_to_demonstrate: An on-call rotation or alert response playbook with a documented transfer of responsibility from detection to response.
 
   - id: RS
     name: Respond

@@ -75,7 +75,7 @@ categories:
       - id: DSR-1
         title: Right of access (Article 15)
         evidence_type: process
-        how_to_demonstrate: A documented Data Subject Access Request workflow with a 30-day response SLA.
+        how_to_demonstrate: A documented Data Subject Access Request workflow that responds within one month of receipt, extended by up to two further months only where Article 12(3) allows.
       - id: DSR-2
         title: Right to rectification (Article 16)
         evidence_type: technical
@@ -89,7 +89,7 @@ categories:
         evidence_type: technical
         how_to_demonstrate: Export of personal data in a structured, commonly used, machine-readable format (JSON or CSV).
       - id: DSR-5
-        title: Right to object to automated decision-making (Article 22)
+        title: Right not to be subject to solely automated decision-making (Article 22)
         evidence_type: documentation
         how_to_demonstrate: A documented mechanism to opt out of solely automated decisions with legal or similarly significant effect, where applicable.
 
@@ -146,4 +146,4 @@ categories:
       - id: XFER-2
         title: Supplementary measures are documented where required by Schrems II
         evidence_type: documentation
-        how_to_demonstrate: Documented Transfer Impact Assessment for transfers to the United States or other third countries without adequacy.
+        how_to_demonstrate: Documented Transfer Impact Assessment for transfers to third countries not covered by an adequacy decision (for the United States, transfers to a recipient not certified under the EU-U.S. Data Privacy Framework).

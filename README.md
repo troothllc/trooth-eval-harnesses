@@ -8,11 +8,11 @@ Trooth operates the Trooth Network: one public, signed, machine-readable record 
 
 ## Who runs these, and who does not
 
-You do. A harness is a list of questions about your own organisation and your own AI systems, and answering them means going and looking. You keep the answers, and you publish the ones you want a buyer to be able to read.
+You do. A harness is a list of questions about your own organization and your own AI systems, and answering them means going and looking. You keep the answers, and you publish the ones you want a buyer to be able to read.
 
-Trooth does not run them for you, does not receive the answers, and does not grade the output. Nothing in this repository sends anything anywhere: there is no code in it. The `trooth` command-line reader does two things - `trooth check <domain>` reads a published record, and `trooth lint` reads what your own infrastructure declares, locally - and neither command takes a framework or reads a harness.
+Trooth does not run them for you, does not receive the answers, and does not grade the output. Nothing in this repository sends anything anywhere: there is no code in it. The `trooth` command-line reader does two things (`trooth check <domain>` reads a published record, and `trooth lint` reads what your own infrastructure declares, locally), and neither command takes a framework or reads a harness.
 
-Working through a harness is also not compliance with the framework it is drawn from. Whether an organisation meets NIST CSF 2.0, the NIST AI RMF, the EU AI Act, the GDPR or the CCPA is settled by an accredited assessor or by the relevant regulator. A YAML file cannot settle it, and neither can Trooth.
+Working through a harness is also not compliance with the framework it is drawn from. Whether an organization meets NIST CSF 2.0, the NIST AI RMF, the EU AI Act, the GDPR or the CCPA is settled, where it can be settled at all, by an assessor or by the relevant regulator (the two NIST frameworks are voluntary, and NIST does not certify conformance to either). A YAML file cannot settle it, and neither can Trooth.
 
 ## What is in this repository
 
@@ -26,7 +26,7 @@ Eight files: five checklists, an Apache 2.0 `LICENSE`, a `.github/CODEOWNERS`, a
 | GDPR, Regulation (EU) 2016/679 | [`harnesses/gdpr/checklist.yaml`](harnesses/gdpr/checklist.yaml) | 7 | 25 |
 | CCPA as amended by the CPRA, Cal. Civ. Code 1798.100 et seq. | [`harnesses/ccpa/checklist.yaml`](harnesses/ccpa/checklist.yaml) | 6 | 20 |
 
-122 items across 30 categories. Each file carries `reviewed: 2026-06-08`, which is the last date somebody read it against the source text. That field is the honest measure of how current a file is; read it before you rely on one.
+122 items across 30 categories. Each file carries `reviewed: 2026-06-08`, which is the date the file gives for its last reading against the source text. That field is the honest measure of how current a file is; read it before you rely on one.
 
 The categories follow the source document rather than a house structure. `nist-csf-2.0` is the six CSF functions, `GV` through `RC`. `nist-ai-rmf-1.0` is Govern, Map, Measure, Manage plus a fifth category for the Generative AI Profile, NIST AI 600-1. `eu-ai-act` runs scope and definitions, prohibited practices, high-risk systems, Article 50 transparency, general-purpose AI models, and post-market monitoring and serious-incident reporting. `gdpr` runs the Article 5 principles, legal bases, special categories, data-subject rights, accountability, security and breach notification, and international transfers. `ccpa` runs applicability, notice at collection, consumer rights, service providers and contractors, reasonable security, and governance.
 
@@ -56,11 +56,11 @@ categories:
         how_to_demonstrate: A current Information Security Policy that references the company's mission and risk appetite.
 ```
 
-Every item in all five files carries exactly those four keys, and no others: `id`, `title`, `evidence_type`, `how_to_demonstrate`. There is no per-item `description` and no per-item `references` array. The only link in a file is the one `source` URL in the `framework` block, so an item identifier is what you take back to the source text yourself.
+Every item in all five files carries exactly those four keys, and no others: `id`, `title`, `evidence_type`, `how_to_demonstrate`. There is no per-item `description` and no per-item `references` array. The only link in a file is the one `source` URL in the `framework` block, so you take an item back to the source text yourself. In `nist-csf-2.0` the item `id` is the CSF's own subcategory identifier. In the other four files it is this repository's own label, so what you look up is the article, section or function named in the item or in its category.
 
-`evidence_type` takes one of three values, and the split across the 122 items is 70 `documentation`, 31 `technical`, 21 `process`. It says what kind of thing would answer the item - a written document, a system setting or a check you can run, or a repeatable practice - so you know whether the item belongs to whoever owns policy, whoever owns the systems, or whoever owns the process.
+`evidence_type` takes one of three values, and the split across the 122 items is 70 `documentation`, 31 `technical`, 21 `process`. It says what kind of thing would answer the item (a written document, a system setting or a check you can run, or a repeatable practice), so you know whether the item belongs to whoever owns policy, whoever owns the systems, or whoever owns the process.
 
-`how_to_demonstrate` is one sentence naming the artifact that would answer the item. It is the most useful field in the file and the most opinionated: it is one way of answering, not the only one.
+`how_to_demonstrate` is a short statement, usually one sentence, naming the artifact that would answer the item. It is the most useful field in the file and the most opinionated: it is one way of answering, not the only one.
 
 Every `framework` block carries `id`, `name`, `version`, `source`, `reviewed` and `notes`. Four of the five also carry `published`; `ccpa`, `eu-ai-act` and `gdpr` carry `effective`, and `ccpa` adds `cpra_effective`.
 
@@ -74,7 +74,7 @@ The files are plain YAML with stable identifiers, so an item can be tracked in w
 
 They are summaries. Each one covers the obligations most often asked about in a vendor review, not every obligation in the source. Four of the five say as much in their own `notes` field; the CCPA file's `notes` describes the statute's applicability thresholds and says nothing about its own coverage. An item that is missing here is not an item that does not apply to you.
 
-They also carry no result. There is no field for pass, fail, severity, weight or a figure, and none is computed anywhere. Counting answered items into a number would turn a reading into a rating, and a rating is the one thing Trooth will not publish about a company.
+They also carry no result. There is no field for a verdict, a severity, a weight or a figure, and none is computed anywhere. Counting answered items into a number would turn a reading into a rating, and Trooth does not publish a rating about any company.
 
 ## Contributing
 
@@ -91,12 +91,11 @@ Report a vulnerability through the [Vulnerability Disclosure Policy](https://tro
 - The Network: [trooth.co/network](https://trooth.co/network)
 - Publish your own record, free: [trooth.co/get-started](https://trooth.co/get-started)
 - How witnessing works, and what Trooth does not read: [trooth.co/methodology](https://trooth.co/methodology)
-- Document starting points, including an AI use policy and a model card: [`troothllc/trooth-templates`](https://github.com/troothllc/trooth-templates)
 - Developers: [trooth.co/developers](https://trooth.co/developers)
 - Contact: [trooth.co/contact](https://trooth.co/contact)
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE). Use these files in commercial or non-commercial work, with or without attribution.
+Apache License 2.0. See [LICENSE](LICENSE). You may use these files in commercial or non-commercial work under the terms of that license, which include keeping a copy of it with any copy of the files you redistribute.
 
-Trooth automates. Trooth never signs for you.
+Trooth signs what it witnessed. It never signs on a company's behalf.

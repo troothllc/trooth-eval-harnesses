@@ -9,9 +9,11 @@ framework:
   notes: |
     The California Consumer Privacy Act of 2018, as amended by the California
     Privacy Rights Act of 2020 (CPRA). Applies to "Businesses" meeting any
-    of the thresholds in 1798.140(d): annual gross revenue over USD 25M,
-    or processing personal information of 100,000+ California consumers,
-    or deriving 50%+ of revenue from selling or sharing personal information.
+    of the thresholds in 1798.140(d): annual gross revenue over USD 25M
+    (a figure the statute adjusts for inflation), or annually buying,
+    selling, or sharing the personal information of 100,000 or more
+    consumers or households, or deriving 50%+ of revenue from selling or
+    sharing personal information.
 
 categories:
   - id: APPLICABILITY

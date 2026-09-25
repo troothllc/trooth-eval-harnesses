@@ -39,7 +39,7 @@ categories:
       - id: GOVERN-5.1
         title: Mechanisms are in place to inventory AI systems
         evidence_type: documentation
-        how_to_demonstrate: An AI System Register listing every AI model, classifier, or generative feature in production with its purpose, owner, and risk tier.
+        how_to_demonstrate: An AI System Register listing every AI model, classifier, or generative feature in production with its purpose, owner, and risk level.
       - id: GOVERN-6.1
         title: Mechanisms for third-party AI risks are addressed
         evidence_type: documentation

@@ -9,8 +9,12 @@ framework:
   notes: |
     Regulation (EU) 2024/1689 of the European Parliament and of the Council
     of 13 June 2024 laying down harmonised rules on artificial intelligence
-    (the "AI Act"). Article 50 transparency obligations and high-risk AI
-    system obligations enter application on 2 August 2026.
+    (the "AI Act"). As adopted in 2024, Article 113 made Article 50
+    transparency obligations and the obligations for high-risk AI systems
+    listed in Annex III apply from 2 August 2026, and those for high-risk
+    systems under Article 6(1) and Annex I from 2 August 2027. Later
+    amendments may change these dates; check the Official Journal before
+    relying on them.
 
     This harness summarizes obligations most relevant to Providers and
     Deployers of AI systems offered to users in the EU.
@@ -46,7 +50,7 @@ categories:
         evidence_type: documentation
         how_to_demonstrate: A documented review per Article 5(1)(b) confirming your system does not exploit identified vulnerability groups.
       - id: PROHIBITED-3
-        title: Social scoring by public authorities
+        title: Social scoring, by public or private actors
         evidence_type: documentation
         how_to_demonstrate: A documented review per Article 5(1)(c) confirming your system is not used for social scoring.
       - id: PROHIBITED-4
@@ -59,7 +63,7 @@ categories:
         how_to_demonstrate: A documented review per Article 5(1)(f) confirming your system does not infer emotions in workplace or educational settings.
 
   - id: HIGH_RISK
-    name: High-Risk AI Systems (Articles 6 to 22 and Annex III)
+    name: High-Risk AI Systems (Articles 6 to 49 and Annex III)
     description: Systems classified as high-risk under Annex III must satisfy a long list of obligations before placing on the EU market.
     items:
       - id: HIGH-RISK-1
@@ -81,7 +85,7 @@ categories:
       - id: HIGH-RISK-5
         title: Record-keeping (logs) is enabled and retained (Article 12)
         evidence_type: technical
-        how_to_demonstrate: Automated logging of system events with retention sufficient to support audit (at least the lifetime of the system in service).
+        how_to_demonstrate: Automated logging of system events, with logs kept for at least six months unless applicable Union or national law provides otherwise (Articles 19 and 26(6)).
       - id: HIGH-RISK-6
         title: Transparency information is provided to deployers (Article 13)
         evidence_type: documentation
@@ -97,7 +101,7 @@ categories:
       - id: HIGH-RISK-9
         title: CE marking is affixed and Declaration of Conformity is signed (Articles 47 to 48)
         evidence_type: documentation
-        how_to_demonstrate: A signed Declaration of Conformity per Article 47 and CE mark affixed to the system. Note - only the Provider can sign this.
+        how_to_demonstrate: A signed Declaration of Conformity per Article 47 and CE mark affixed to the system; only the Provider can sign the Declaration.
       - id: HIGH-RISK-10
         title: Registration in the EU database before placing on the market (Article 49)
         evidence_type: documentation
@@ -156,4 +160,4 @@ categories:
       - id: POST-2
         title: Serious incidents are reported to the relevant authority within 15 days (Article 73)
         evidence_type: process
-        how_to_demonstrate: An Incident Response Plan that specifies the 15-day reporting timeline and the responsible reporter.
+        how_to_demonstrate: An Incident Response Plan that specifies the 15-day reporting limit, the shorter limits in Article 73(3) and 73(4), and the responsible reporter.
