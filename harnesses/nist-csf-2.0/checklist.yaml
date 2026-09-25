@@ -9,7 +9,7 @@ framework:
     NIST CSF 2.0 organizes cybersecurity outcomes into six Functions:
     Govern (GV), Identify (ID), Protect (PR), Detect (DE), Respond (RS),
     and Recover (RC). Each Function contains Categories and Subcategories.
-    This harness summarizes the Subcategories most frequently referenced
+    This checklist summarizes the Subcategories most frequently referenced
     in SaaS vendor reviews and SOC 2 audits.
 
 categories:

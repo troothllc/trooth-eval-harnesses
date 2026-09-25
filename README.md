@@ -1,18 +1,18 @@
-# trooth-eval-harnesses
+# trooth-checklists
 
 Five checklists a company works through against its own systems, in YAML.
 
 Trooth operates the Trooth Network: one public, signed, machine-readable record per company, carrying its identity, products and demos, commercial terms, domain and marketing links, people, documents, security and privacy posture, AI practices, procurement terms and relationships. It is Trooth's only product and it is free.
 
-**Trooth witnesses and dates facts. It does not score, rate, rank or certify anyone.**
+**Trooth witnesses and dates facts. It does not grade, rate or rank anyone.**
 
 ## Who runs these, and who does not
 
-You do. A harness is a list of questions about your own organization and your own AI systems, and answering them means going and looking. You keep the answers, and you publish the ones you want a buyer to be able to read.
+You do. A checklist is a list of questions about your own organization and your own AI systems, and answering them means going and looking. You keep the answers, and you publish the ones you want a buyer to be able to read.
 
-Trooth does not run them for you, does not receive the answers, and does not grade the output. Nothing in this repository sends anything anywhere: there is no code in it. The `trooth` command-line reader does two things (`trooth check <domain>` reads a published record, and `trooth lint` reads what your own infrastructure declares, locally), and neither command takes a framework or reads a harness.
+Trooth does not run them for you, does not receive the answers, and does not grade the output. Nothing in this repository sends anything anywhere: there is no code in it. The `trooth` command-line reader does two things (`trooth check <domain>` reads a published record, and `trooth lint` reads what your own infrastructure declares, locally), and neither command takes a framework or reads a checklist.
 
-Working through a harness is also not compliance with the framework it is drawn from. Whether an organization meets NIST CSF 2.0, the NIST AI RMF, the EU AI Act, the GDPR or the CCPA is settled, where it can be settled at all, by an assessor or by the relevant regulator (the two NIST frameworks are voluntary, and NIST does not certify conformance to either). A YAML file cannot settle it, and neither can Trooth.
+Working through a checklist is also not compliance with the framework it is drawn from. Whether an organization meets NIST CSF 2.0, the NIST AI RMF, the EU AI Act, the GDPR or the CCPA is settled, where it can be settled at all, by an assessor or by the relevant regulator (the two NIST frameworks are voluntary, and NIST does not certify conformance to either). A YAML file cannot settle it, and neither can Trooth.
 
 ## What is in this repository
 
@@ -80,7 +80,7 @@ They also carry no result. There is no field for a verdict, a severity, a weight
 
 Useful pull requests: refreshing an item against a newer revision of a source and moving the `reviewed` date with it, correcting a citation, clarifying a `how_to_demonstrate` that names the wrong artifact, or adding a framework as a new directory under `harnesses/` in the same shape. Open an issue before adding a framework, so the coverage question is argued about before the YAML is written. Contributions are licensed under Apache 2.0.
 
-`.github/CODEOWNERS` in this repository assigns review to `@troothllc/maintainers`, a team that does not exist yet, so it currently assigns pull requests to nobody. That is named here rather than left for a contributor to discover when their pull request sits unreviewed.
+`.github/CODEOWNERS` in this repository assigns review to `@troothllc/maintainers`, the team that maintains Trooth's public repositories. It has one member today.
 
 ## Security
 

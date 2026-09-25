@@ -8,7 +8,7 @@ framework:
   reviewed: 2026-06-08
   notes: |
     GDPR governs the processing of personal data of individuals in the EU
-    and EEA. The UK GDPR mirrors most provisions. This harness summarizes
+    and EEA. The UK GDPR mirrors most provisions. This checklist summarizes
     the most-evaluated obligations for SaaS vendors processing personal
     data as either Controller or Processor.
 

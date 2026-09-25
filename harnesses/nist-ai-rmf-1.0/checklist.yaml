@@ -9,7 +9,7 @@ framework:
     NIST AI RMF 1.0 organizes AI risk management into four Functions:
     Govern, Map, Measure, Manage. The Generative AI Profile (NIST AI 600-1)
     extends the framework with twelve generative-AI-specific risks.
-    This harness covers the most-evaluated subcategories.
+    This checklist covers the most-evaluated subcategories.
 
 categories:
   - id: GOVERN
